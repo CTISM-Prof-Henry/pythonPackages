@@ -1,0 +1,39 @@
+name: Testes e publicação
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instala dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest build twine
+
+      - name: Executa testes
+        run: pytest
+
+      - name: Gera pacote
+        run: python -m build
+
+      - name: Publica no TestPyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_TOKEN }}
+        run: |
+          twine upload \
+            --repository-url https://test.pypi.org/legacy/ \
+            dist/*
