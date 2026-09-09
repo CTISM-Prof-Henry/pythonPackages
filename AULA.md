@@ -25,6 +25,9 @@ publicação do pacote no PyPI.
    git tag v0.1.0  # ou outro número de versão, dependendo de qual você estiver
    git push origin v0.1.0
    ```
+> [!NOTE]
+> Você pode criar uma release na página inicial do seu repositório, no menu lateral na direita. Uma release faz uso
+> de tags.
 8. O GitHub Actions irá executar o workflow de publicação do pacote no TestPyPi.
 9. Acesse o site TestPyPi e verifique se o pacote foi publicado com sucesso. Você pode verificar tanto na 
    [tela de configuração da sua conta](https://test.pypi.org/manage/projects/) quanto usando a busca do TestPyPi.
