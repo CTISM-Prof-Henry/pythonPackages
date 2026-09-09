@@ -7,7 +7,7 @@ version_scheme = "no-guess-dev"
 local_scheme = "no-local-version"
 
 [project]
-name = "pythonPackages"
+name = "henryzord_pythonPackages"
 dynamic = ["version"]
 description = "Um pacote de rolagem de dados para jogos de RPG"
 readme = "README.md"
