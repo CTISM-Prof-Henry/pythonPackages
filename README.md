@@ -12,15 +12,16 @@ Já o arquivo [AULA.md](AULA.md) é um tutorial passo-a-passo de como criar e pu
 Caso o pacote estivesse publicado no PyPI, você poderia instalá-lo com o seguinte comando:
 
 ```bash
-pip install rpg-dice
+pip install henryzord_pythonPackages
 ```
 
 Como este pacote está publicado apenas no TestPyPi, você deve instalar com o seguinte comando:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ rpg-dice
+pip install --index-url https://test.pypi.org/simple/ henryzord_pythonPackages
 ```
 
+O pacote está hospedado neste link: https://test.pypi.org/project/henryzord-pythonPackages/
 
 ## Uso
 
